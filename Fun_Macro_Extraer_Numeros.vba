@@ -16,7 +16,7 @@ For i = 1 To Len(cadena)
     End If
 Next
  
-'Devolver los números encontrados
+'Devolver los números encontrados.
 EXTRAENUM = numeros
  
 End Function
