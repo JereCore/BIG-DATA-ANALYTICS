@@ -8,7 +8,7 @@ aApellido = Split(NombreCompuesto, " ")
 For elto = 0 To UBound(aApellido)
     'homogeneizamos todo en minúscula
     Select Case LCase(aApellido(elto))
-        Case "de", "del", "el", "la", "las", "los", "san", "y"
+        Case "de", "del", "el", "la", "las", "los", "san", "y", "vda"
             N_Apellido = N_Apellido & aApellido(elto) & " "
         Case Else
             'si es la última parte del apellido
@@ -48,7 +48,9 @@ If partes > 3 Then  'esto nos indica que el Nombre es Compuesto!
     Next x
 Else    'si el Nombre NO es compuesto
     'cargamos uno a uno las partes del nombre
-    For x = 0 To UBound(nNombreCompleto)
+    NombreFinal(contador) = nNombreCompleto(2)
+    contador = 1
+    For x = 0 To UBound(nNombreCompleto) - 1
         NombreFinal(contador) = nNombreCompleto(x)
         contador = contador + 1
     Next x
